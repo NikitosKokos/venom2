@@ -1,0 +1,25 @@
+.film {
+
+    &__content {
+    }
+
+    &__text {
+    }
+
+    &__date {
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__name {
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__descr {
+        max-width: 423px;
+        font-size: 16px;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}

@@ -1,4 +1,17 @@
 .film {
+    
+    &__venom{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__blood{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
 
     &__content {
     }
@@ -21,5 +34,46 @@
         font-size: 16px;
         line-height: 1.4;
         color: rgba(255, 255, 255, 0.8);
+        margin: 0px 0px 70px 0px;
+    }
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 145px 0px;
+    }
+
+    &__primary{
+        color: #8D0019;
+        background: $white;
+        margin: 0px 20px 0px 0px;
+        @media (min-width: $md2+px){
+            &:hover{
+                background: transparent;
+            }
+        }
+    }
+
+    &__link{
+        color: $white;
+        @media (min-width: $md2+px){
+            &:hover{
+                background: #8D0019;
+            }
+        }
+    }
+}
+
+.btn{
+    padding: 15px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+
+    img{
+        width: 15px;
+        margin: 0px 10px 0px 0px;
     }
 }

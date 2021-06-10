@@ -6,6 +6,7 @@
 	<body>
 		<div class="wrapper">
 			@@include('_header.html',{})
+			<div class="wrapper__bg _ibg"><img src="./img/bg.jpg" alt="bg"></div>
 			<main class="page">
 				<div class="film">
 					<div class='film__content _container'>
@@ -15,7 +16,21 @@
 							<div class="film__descr">В настырном журналисте по-прежнему живет симбиот. Том Харди в образе обаятельного суперзлодея из комиксов Marvel.</div>
 						</div>
 						<!-- /.film__text -->
+						<div class="film__buttons">
+							<button class="btn film__primary">
+								<img src="./img/icons/play.svg" alt="play">
+								<span>смотреть трейлер</span>
+							</button>
+							<a href="trailer.html" class="btn film__link">
+								<img src="./img/icons/ticket.svg" alt="ticket">
+								<span>билеты на премьеру</span>
+							</a>
+						</div>
+						<!-- /.film__buttons -->
 					</div>
+					<div class="film__venom"><img src="./img/venom.png" alt="venom"></div>
+					<div class="film__blood"><img src="./img/blood.png" alt="blood"></div>
+					<!-- /.film__venom -->
 				</div>
 				<!-- /.film -->
 			</main>

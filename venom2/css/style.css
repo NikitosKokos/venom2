@@ -332,6 +332,136 @@ h6 {
   margin: 0px 10px 0px 0px;
 }
 
+.about {
+  margin: 0px 0px 115px 0px;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0px 0px 20px 0px;
+}
+
+.about__descr {
+  max-width: 423px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0px 0px 30px 0px;
+}
+
+.about__subtitle {
+  font-size: 16px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0px 0px 15px 0px;
+}
+
+.about__list li {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+}
+
+.about__list_column {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  max-width: 350px;
+}
+
+.about__play {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  position: relative;
+  background: #fff;
+}
+
+.about__play:before {
+  content: '';
+  width: 45px;
+  height: 45px;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.about__trailer {
+  width: 356px;
+  height: 205px;
+  background: url("../img/trailer-cover.jpg") center no-repeat;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.about__poster-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__poster-wrapper .about__subtitle {
+  margin: 0px 0px 5px 0px;
+}
+
+.about__poster-wrapper .about__list {
+  margin: 0px 0px 20px 0px;
+}
+
+.about__poster {
+  width: 360px;
+  height: auto;
+  border-radius: 5px;
+  margin: 0px 30px 0px 0px;
+}
+
 ._container {
   max-width: 1140px;
   margin: 0 auto;
@@ -400,6 +530,11 @@ body.hidden {
   .film__link:hover {
     background: #8D0019;
   }
+
+  .about__trailer:hover .about__play:before {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 @media (max-width: 1152px) {
@@ -420,3 +555,5 @@ body.hidden {
     padding: 0 10px;
   }
 }
+
+.webp .about__trailer{ background: url(../img/trailer-cover.webp) center no-repeat; }

@@ -1,0 +1,116 @@
+.about {
+    $self: &;
+    margin: 0px 0px 115px 0px;
+
+    &__content {
+        display: flex;
+    }
+
+    &__item {
+        flex: 0 0 50%;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__descr {
+        max-width: 423px;
+        font-size: 16px;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0px 0px 15px 0px;
+    }
+
+    &__list {
+        li{
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+        }
+
+        &_column{
+            column-count: 2;
+            column-gap: 20px;
+            max-width: 350px;
+        }
+    }
+
+    &__play {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in-out;
+        position: relative;
+        background: $white;
+
+         &:before{
+            content: '';
+            width: 45px;
+            height: 45px;
+            border: 2px solid $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            transition: all .3s ease-in-out;
+            transform: translate(-50% , -50%);
+        }
+    }
+
+    &__trailer {
+        width: 356px;
+        height: 205px;
+        background: url('../img/trailer-cover.jpg') center no-repeat;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+        cursor: pointer;
+        @media (min-width: $md2+px){
+            &:hover{
+                #{$self}__play{
+                     &:before{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__poster-wrapper {
+        display: flex;
+
+        #{$self}__subtitle{
+            margin: 0px 0px 5px 0px;
+        }
+        #{$self}__list{
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__poster {
+        width: 360px;
+        height: auto;
+        border-radius: 5px;
+        margin: 0px 30px 0px 0px;
+    }
+
+    &__creators {
+    }
+}

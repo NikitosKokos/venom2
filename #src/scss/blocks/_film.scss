@@ -4,6 +4,20 @@
         position: absolute;
         top: 0;
         right: 0;
+        max-width: 728px;
+        width: 50%;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        @media (max-width: $md3+px){
+            top: 10%;
+        }
+        @media (max-width: 560px){
+            top: 20%;
+            transform: translateX(20%);
+        }
     }
 
     &__blood{
@@ -11,22 +25,46 @@
         top: 0;
         right: 0;
         z-index: -1;
+        max-width: 814px;
+        width: 60%;
+        @media (max-width: $md3+px){
+           display: none;
+        }
     }
 
     &__content {
+        width: 90%;
+        margin: 0 auto;
     }
 
     &__text {
+        @media (max-width: 560px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__date {
         font-size: 24px;
         color: rgba(255, 255, 255, 0.8);
-        margin: 0px 0px 40px 0px;
+        margin: 0px 0px 3% 0px;
+
+        @media (max-width: 560px){
+            font-size: 18px;
+        }
     }
 
     &__name {
-        margin: 0px 0px 40px 0px;
+        margin: 0px 0px 3% 0px;
+        width: 70%;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
     }
 
     &__descr {
@@ -34,13 +72,18 @@
         font-size: 16px;
         line-height: 1.4;
         color: rgba(255, 255, 255, 0.8);
-        margin: 0px 0px 70px 0px;
+        margin: 0px 0px 5% 0px;
     }
 
     &__buttons{
         display: flex;
         align-items: center;
         margin: 0px 0px 145px 0px;
+
+        @media (max-width: 560px){
+           flex-direction: column;
+           margin: 0px 0px 40px 0px;
+        }
     }
 
     &__primary{
@@ -51,6 +94,9 @@
             &:hover{
                 background: transparent;
             }
+        }
+        @media (max-width: $md3+px){
+            margin: 0px 0px 10px 0px;
         }
     }
 

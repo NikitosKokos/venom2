@@ -4,6 +4,7 @@
 @import "./base/fonts";
 @import "./base/zeroing";
 @import "./base/ibg"; 
+@import "./base/burger"; 
 
 // blocks
 @import "./blocks/header";
@@ -43,6 +44,10 @@
 		top: 0;
 		left: 0;
 		z-index: -1;
+
+		@media (max-width: $md3+px){
+			display: none;
+		}
 	}
 }
 

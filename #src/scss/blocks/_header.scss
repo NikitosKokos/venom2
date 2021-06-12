@@ -1,9 +1,30 @@
 .header {
-    padding: 40px 0px 80px 0px;
+    padding: 40px 0px 4% 0px;
 
     &__content {
         display: flex;
         align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+    &__label{
+        font-size: 14px;
+        color: $white;
+        transition: all .3s ease-in-out;
+        &.active{
+            color: #14131A;
+        }
+    }
+
+    &__burger{
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+
+        @media (min-width: 560px) {
+            display: none;
+        }
     }
 
     &__logo {
@@ -16,17 +37,51 @@
     }
 
     &__nav {
+        flex: 1 1 auto;
+        @media (max-width: 560px){
+           display: flex;
+           align-items: center;
+           justify-content: flex-end;
+        }
     }
 
     &__list {
         display: flex;
         align-items: center;
+        transition: all .3s ease-in-out;
 
         li{
             margin: 0px 30px 0px 0px;
             &:last-child{
               margin: 0px 0px 0px 0px;
             }
+        }
+
+        @media (max-width: 560px){
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: $white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           flex-direction: column;
+           z-index: 9;
+           transform: translateX(100%);
+           
+
+           &_active{
+                transform: translateX(0%);
+           }
+
+           li{
+                margin: 0px 0px 15px 0px;
+                &:last-child{
+                margin: 0px 0px 0px 0px;
+                }
+           }
         }
     }
 
@@ -54,6 +109,10 @@
                 bottom: -1px;
             }
          }
+        }
+        @media (max-width: 560px){
+            color: #14131A;
+            font-size: 16px;
         }
     }
 }
